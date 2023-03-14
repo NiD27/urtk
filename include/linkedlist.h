@@ -1,3 +1,6 @@
+/**
+ * UNDER CONSTRUCTION
+*/
 #ifndef _URTK_LINKEDLIST
 #define _URTK_LINKEDLIST
 
@@ -29,12 +32,28 @@ typedef struct LINKEDLIST_D{
     uint32_t length;
 }LINKEDLIST_D_ST;
 
-uint8_t linkedlist_insert_at_index(void* data, uint32_t index);
-uint8_t linkedlist_insert_at_beginning(void* data);
-uint8_t linkedlist_insert_at_end(void* data);
+/**
+ * Singly linked list
+*/
 
-uint8_t linkedlist_delete_at_index(uint32_t index);
-uint8_t linklist_delete_at_beginning();
-uint8_t linklist_delete_at_beginning();
+uint8_t linkedlist_s_insert_at_index(LINKEDLIST_S_ST *linkedlist, void* data, uint32_t index);
+uint8_t linkedlist_s_insert_at_beginning(LINKEDLIST_S_ST *linkedlist, void* data);
+uint8_t linkedlist_s_insert_at_end(LINKEDLIST_S_ST *linkedlist, void* data);
+
+uint8_t linkedlist_s_delete_at_index(LINKEDLIST_S_ST *linkedlist, uint32_t index);
+uint8_t linklist_s_delete_at_beginning(LINKEDLIST_S_ST *linkedlist);
+uint8_t linklist_s_delete_at_beginning(LINKEDLIST_S_ST *linkedlist);
+
+/**
+ * Doubly linked list
+*/
+
+uint8_t linkedlist_d_insert_at_index(LINKEDLIST_D_ST *linkedlist, void* data, uint32_t index);
+uint8_t linkedlist_d_insert_at_beginning(LINKEDLIST_D_ST *linkedlist, void* data);
+uint8_t linkedlist_d_insert_at_end(LINKEDLIST_D_ST *linkedlist, void* data);
+
+uint8_t linkedlist_d_delete_at_index(LINKEDLIST_D_ST *linkedlist, uint32_t index);
+uint8_t linklist_d_delete_at_beginning(LINKEDLIST_D_ST *linkedlist);
+uint8_t linklist_d_delete_at_beginning(LINKEDLIST_D_ST *linkedlist);
 
 #endif
